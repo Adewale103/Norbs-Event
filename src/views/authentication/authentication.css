@@ -37,13 +37,13 @@
 
 .authentication-button{
     border: unset;
-    background-color: var(--primary_green);
+    background-color: white;
     color: black;
     font-size: 14px;
     font-weight: bold;
     border-radius: 4px;
-    width: 100%;
     height: 50px;
+    cursor: pointer;
 
 }
 .leftSide-container a{
@@ -99,4 +99,15 @@
     border-radius: 4px;
     text-align: center;
     float:right;
+}
+
+.authentication-button-alternate{
+    background-color: transparent;
+    color: var(--primary_green);
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    
 }

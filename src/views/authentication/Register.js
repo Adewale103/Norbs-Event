@@ -14,7 +14,7 @@ const Register = () => {
          firstName : {message :"",error: false},
          lastName: { message: "", error: false},
          email: { message: "", error: false},
-         phoneNumber: { message: "", error: false},
+         phone: { message: "", error: false},
          password: { message: "", error: false},
          confirmPassword: { message: "", error: false}
     }
@@ -89,14 +89,18 @@ const checkIfItIsEmail = () =>{
                 </StepContainer>}
 
                 {step === 2 &&<StepContainer step={2} headerTitle="Let's Secure Your Details">
-                <Input text="text" handleChange={handleChange} icon={emailIcon} label = "firstName" fieldError={fieldError}/>
-                <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "lastName" fieldError={fieldError}/>
-                <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "email" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={emailIcon} label = "phone" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "password" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "confirmPassword" fieldError={fieldError}/>
                 </StepContainer>}
 
-            { step === 1 && <button style = {{width: '65%'}} className ="authentication-button" onClick = {handleClick}>Next Step</button>}
-                { step ===2 && <div style={{display : "flex", justifyContent: "space-between"}}>
-                <button style = {{width: '35%'}} className ="authentication-button-alternate" onClick = {handleClick}>Go Back</button>
+            { step === 1 && 
+                <button onClick={() => setStep(2)} style = {{width: '65%'}} className ="authentication-button" >
+                    Next Step</button>}
+                
+            { step ===2 && 
+                <div style={{display : "flex", justifyContent: "space-between", width: "65%"}}>
+                     <button onClick={()=> setStep(1)} style = {{width: '35%'}} className ="authentication-button-alternate">Go Back</button>
                 <button style = {{width: '35%'}} className ="authentication-button" onClick = {handleClick}>Register</button>
                 </div>}
         <div className="social-media">
