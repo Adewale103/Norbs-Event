@@ -61,7 +61,7 @@ const checkIfItIsEmail = () =>{
     
 }
     return(
-        <div className="loginContainer">
+        <div className="authenticationContainer">
         <div className="leftSide">
             <div className="leftSide-container">
             <a>Don't have an account?
@@ -81,7 +81,7 @@ const checkIfItIsEmail = () =>{
             
             <Input text="password" handleChange={handleChange} icon={passwordIcon} label = "password" fieldError={fieldError}/>
           
-            <button onClick = {handleClick}>Get Into Norbs</button>
+            <button className = "authentication-button" onClick = {handleClick}>Get Into Norbs</button>
          </div>
         <div className="social-media">
             <a>
