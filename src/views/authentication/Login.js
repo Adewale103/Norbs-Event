@@ -2,7 +2,7 @@ import { useState } from "react"
 import Input from "../../components/reusable/Input"
 import emailIcon from "../../assets/email.svg"
 import passwordIcon from "../../assets/password.svg"
-import "./login.css"
+import "./authentication.css"
 
 
 const Login = () => {
