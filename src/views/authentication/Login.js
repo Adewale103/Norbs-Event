@@ -2,6 +2,7 @@ import { useState } from "react"
 import Input from "../../components/reusable/Input"
 import emailIcon from "../../assets/email.svg"
 import passwordIcon from "../../assets/password.svg"
+import { Link } from "react-router-dom"
 import "./authentication.css"
 
 
@@ -65,9 +66,9 @@ const checkIfItIsEmail = () =>{
         <div className="leftSide">
             <div className="leftSide-container">
             <a>Don't have an account?
-                <span style={{color: 'var(--primary_green)',
-            marginLeft: '4px'}}>
-                    sign up
+                <span>
+                <Link to="/" style={{color: 'var(--primary_green)',
+                marginLeft: '4px'}}> sign up</Link>
                 </span>
             </a>
             <div className="welcome-text">

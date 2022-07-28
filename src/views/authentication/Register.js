@@ -1,7 +1,10 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import Input from "../../components/reusable/Input"
 import emailIcon from "../../assets/email.svg"
 import passwordIcon from "../../assets/password.svg"
+import userIcon from "../../assets/user.svg"
+import phoneIcon from "../../assets/phone.svg"
 import "./authentication.css"
 import StepContainer from "../../components/authentication/register/StepContainer"
 
@@ -71,9 +74,9 @@ const checkIfItIsEmail = () =>{
         <div className="leftSide">
             <div className="leftSide-container">
             <a>Have an account?
-                <span style={{color: 'var(--primary_green)',
-            marginLeft: '4px'}}>
-                    Login
+                <span>
+                    <Link to="/login" style={{color: 'var(--primary_green)',
+            marginLeft: '4px'}}> Login</Link>
                 </span>
             </a>
             <div className="welcome-text">
@@ -83,13 +86,13 @@ const checkIfItIsEmail = () =>{
                 </p>
                 </div>
                 {step === 1 &&<StepContainer step={1} headerTitle="Let us know you">
-                <Input text="text" handleChange={handleChange} icon={emailIcon} label = "firstName" fieldError={fieldError}/>
-                <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "lastName" fieldError={fieldError}/>
-                <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "email" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={userIcon} label = "firstName" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={userIcon} label = "lastName" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={emailIcon} label = "email" fieldError={fieldError}/>
                 </StepContainer>}
 
                 {step === 2 &&<StepContainer step={2} headerTitle="Let's Secure Your Details">
-                <Input text="text" handleChange={handleChange} icon={emailIcon} label = "phone" fieldError={fieldError}/>
+                <Input text="text" handleChange={handleChange} icon={phoneIcon} label = "phone" fieldError={fieldError}/>
                 <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "password" fieldError={fieldError}/>
                 <Input text="text" handleChange={handleChange} icon={passwordIcon} label = "confirmPassword" fieldError={fieldError}/>
                 </StepContainer>}
