@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
 import Input from "../../components/reusable/Input"
 import emailIcon from "../../assets/email.svg"
 import passwordIcon from "../../assets/password.svg"
@@ -7,9 +6,13 @@ import userIcon from "../../assets/user.svg"
 import phoneIcon from "../../assets/phone.svg"
 import "./authentication.css"
 import StepContainer from "../../components/authentication/register/StepContainer"
+import {useNavigate} from 'react-router-dom'
 
 
 const Register = () => {
+
+    let navigate = useNavigate()
+
     const [userInput, setUserInput] = useState({})
     const [step,setStep] = useState(1)
     const [fieldError, setFieldError] = useState(
@@ -73,10 +76,9 @@ const checkIfItIsEmail = () =>{
         <div className="authenticationContainer">
         <div className="leftSide">
             <div className="leftSide-container">
-            <a>Have an account?
-                <span>
-                    <Link to="/login" style={{color: 'var(--primary_green)',
-            marginLeft: '4px'}}> Login</Link>
+            <a onClick={()=> navigate("/login")}>Have an account?
+                <span style={{color: 'var(--primary_green)',
+            marginLeft: '4px'}}> Login
                 </span>
             </a>
             <div className="welcome-text">

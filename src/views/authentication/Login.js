@@ -4,9 +4,13 @@ import emailIcon from "../../assets/email.svg"
 import passwordIcon from "../../assets/password.svg"
 import { Link } from "react-router-dom"
 import "./authentication.css"
+import { useNavigate } from "react-router-dom"
 
 
 const Login = () => {
+
+let navigate = useNavigate()
+
     const [userInput, setUserInput] = useState({})
     const [fieldError, setFieldError] = useState(
         {
@@ -65,10 +69,9 @@ const checkIfItIsEmail = () =>{
         <div className="authenticationContainer">
         <div className="leftSide">
             <div className="leftSide-container">
-            <a>Don't have an account?
-                <span>
-                <Link to="/" style={{color: 'var(--primary_green)',
-                marginLeft: '4px'}}> sign up</Link>
+            <a onClick={()=> navigate("/register")}>Don't have an account?
+                <span style={{color: 'var(--primary_green)',
+                marginLeft: '4px'}}> sign up
                 </span>
             </a>
             <div className="welcome-text">
