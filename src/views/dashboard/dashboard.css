@@ -1,0 +1,63 @@
+.dashboardContainer{
+  display: flex;
+  width: 100vw;
+}
+
+.dashboardHeader{
+    background-color: var(--dashboard_main);
+    height: 10vh;
+}
+
+.dashboardSideNav{
+    height: 100vh;
+    background-color: var(--dashboard_main);
+    transition: 0.5s;
+}
+
+.dashboardBodyContainer{
+  width: inherit;
+  height: 100vh;
+  background-color: var(--dashboard_accent);
+}
+
+.sideNavLogoSection{
+ border-right: 1px solid var(--dashboard_accent);
+ border-bottom: 1px solid var(--dashboard_accent);
+ height: 10%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 20px;
+}
+
+#sideNavLogo{
+  background-color: white;
+  color: var(--primary-green);
+  font-weight: bold;
+  padding: 6px 9px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.sideNavLinks > {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+}
+
+.sideNavLinks > .links > .link{
+  width: 100%;
+  height: 5vh;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0 23px;
+  background-color: transparent;
+  border: unset;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-bottom: 2em;
+}
+
