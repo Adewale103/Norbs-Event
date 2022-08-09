@@ -20,23 +20,23 @@
   background-color: var(--dashboard_accent);
 }
 
+
 .sideNavLogoSection{
- border-right: 1px solid var(--dashboard_accent);
- border-bottom: 1px solid var(--dashboard_accent);
- height: 10%;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 0 20px;
+  height: 10%;
+  display: column;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 #sideNavLogo{
   background-color: white;
-  color: var(--primary-green);
+  color: var(--primary_green);
   font-weight: bold;
   padding: 6px 9px;
   font-size: 18px;
   border-radius: 6px;
+  width: min-content;
+  margin-bottom: 15px;
 }
 
 .sideNavLinks > {
