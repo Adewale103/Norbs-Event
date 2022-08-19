@@ -23,7 +23,8 @@
 
 .sideNavLogoSection{
   height: 10%;
-  display: column;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 10px 20px;
 }
@@ -58,6 +59,6 @@
   border: unset;
   cursor: pointer;
   text-transform: capitalize;
-  margin-bottom: 2em;
+  margin-bottom: 2sem;
 }
 
