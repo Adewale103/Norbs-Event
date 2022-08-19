@@ -7,6 +7,7 @@ import phoneIcon from "../../assets/phone.svg"
 import "./authentication.css"
 import StepContainer from "../../components/authentication/register/StepContainer"
 import {useNavigate} from 'react-router-dom'
+import axios from "axios"
 
 
 const Register = () => {
@@ -31,7 +32,10 @@ const Register = () => {
         checkIfFieldIsEmpty(e)
     }
 const handleClick = () => {
-    console.log(userInput)
+    // setLoading(true)
+    axios.post("http://localhost:3004/accounts", userInput).
+    then((data)=> console.log(data)).
+    catch((error)=> console.log(error))
 }
 const checkIfFieldIsEmpty = (e) =>{
     switch (e.target.name){
@@ -106,7 +110,7 @@ const checkIfItIsEmail = () =>{
             { step ===2 && 
                 <div style={{display : "flex", justifyContent: "space-between", width: "65%"}}>
                      <button onClick={()=> setStep(1)} style = {{width: '35%'}} className ="authentication-button-alternate">Go Back</button>
-                <button style = {{width: '35%'}} className ="authentication-button" onClick = {handleClick}>Register</button>
+                <button style = {{width: '35%'}} className ="authentication-button" onClick={handleClick}>Register</button>
                 </div>}
         <div className="social-media">
             <a>

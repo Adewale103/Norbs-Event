@@ -1,0 +1,53 @@
+{
+  "accounts": [
+    {
+      "firstName": "Adewale",
+      "lastName": "Adeyinka",
+      "email": "adeyinkawale13@gmail.com",
+      "phone": "09021806462",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 1
+    }
+  ],
+
+"events": [
+  {
+    "date_created": "2015-12-23",
+    "date_updated": "2015-12-23",
+    "location": "",
+    "venue": "",
+    "stop_time": "",
+    "start_time": "",
+    "description": "",
+    "event_date": "",
+    "user": "",
+    "host": "",
+    "guest": [],
+    "attendees": [],
+    "event-banner": "",
+    "event-image": "",
+    "sponsors": [],
+    "ticket-category": "",
+    "ticket-fee": "",
+    "event-team": [],
+    "event_dress_code": "",
+    "number_of_seats": "",
+    "available-tickets": ""
+  }
+],
+  "fakeEvents": [
+    {
+      "title": "Alakija",
+      "description": "today is the way the Lord made"
+    },
+    {
+      "title": "Jonathan",
+      "description": "Get together landmark"
+    },
+    {
+      "title": "Uchechi",
+      "description": "today is the way the Lord made"
+    }
+  ]
+}

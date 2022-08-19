@@ -5,6 +5,7 @@ import passwordIcon from "../../assets/password.svg"
 import { Link } from "react-router-dom"
 import "./authentication.css"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
 
 const Login = () => {
@@ -24,7 +25,10 @@ let navigate = useNavigate()
         checkIfFieldIsEmpty(e)
     }
 const handleClick = () => {
-    console.log(userInput)
+    axios.get(`http://localhost:5000/accounts?email=${userInput["email"]}`).
+    then((result)=> {
+        result.data[0].password===userInput["password"] && navigate("/dashboard")
+    }).catch((error)=> console.log(error))
 }
 const checkIfFieldIsEmpty = (e) =>{
     switch (e.target.name){
